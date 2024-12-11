@@ -6,7 +6,7 @@ import "./globals.css";
 // All packages except `@mantine/hooks` require styles imports
 import "@mantine/core/styles.css";
 
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
 import { DraculaTheme } from "dracula-mantine";
 
 export const metadata: Metadata = {
@@ -14,15 +14,26 @@ export const metadata: Metadata = {
 	description: "I have followed setup instructions carefully",
 };
 
-const geistSans = localFont({
-	src: "./fonts/GeistVF.woff",
-	variable: "--font-geist-sans",
-	weight: "100 900",
+const fontNotoSansKR = localFont({
+	src: "./fonts/NotoSans-Regular.woff2",
+	variable: "--font-noto-sans",
+	display: 'swap',
 });
-const geistMono = localFont({
-	src: "./fonts/GeistMonoVF.woff",
-	variable: "--font-geist-mono",
-	weight: "100 900",
+const fontNotoSansMono = localFont({
+	src: "./fonts/NotoSans-Regular.woff2",
+	variable: "--font-noto-sans",
+	display: 'swap',
+});
+const fontYeongdo = localFont({
+	src: "./fonts/YeongdoOTF-Regular.woff2",
+	variable: "--font-yeongdo",
+	display: 'swap',
+});
+
+const theme = createTheme({
+	...DraculaTheme,
+	fontFamily: fontNotoSansKR.style.fontFamily,
+	fontFamilyMonospace: fontNotoSansMono.style.fontFamily,
 });
 
 export default function RootLayout({
@@ -35,8 +46,8 @@ export default function RootLayout({
 			<head>
 				<ColorSchemeScript defaultColorScheme="dark" />
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<MantineProvider defaultColorScheme="dark" theme={DraculaTheme}>
+			<body className={`${fontYeongdo.variable} antialiased`}>
+				<MantineProvider defaultColorScheme="dark" theme={theme}>
 					{children}
 				</MantineProvider>
 			</body>

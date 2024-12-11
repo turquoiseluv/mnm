@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 export default function MyCard({ playerOn, togglePlayer }) {
 	return (
 		<motion.div
-			style={{ width: "fit-content", position: "absolute", right: 0, bottom: 0, margin: "10px", height: playerOn ? "fit-content" : 0, overflow: "hidden" }}
+			style={{ width: "fit-content", position: "absolute", right: 0, bottom: 0, margin: "10px", overflow: "hidden", zIndex: 10 }}
 			animate={{
 				height: playerOn ? "fit-content" : 0,
 				transition: { duration: 0.2, ease: "easeInOut" },

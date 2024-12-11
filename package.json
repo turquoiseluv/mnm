@@ -11,6 +11,8 @@
   "dependencies": {
     "@mantine/core": "^7.14.3",
     "@mantine/hooks": "^7.14.3",
+    "@mantinex/mantine-logo": "^1.0.1",
+    "@tabler/icons-react": "^3.24.0",
     "dracula-mantine": "^1.1.0",
     "motion": "^11.13.1",
     "next": "15.0.3",
