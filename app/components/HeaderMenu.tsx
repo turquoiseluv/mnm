@@ -1,7 +1,6 @@
 import { IconChevronDown } from "@tabler/icons-react";
 import { Burger, Center, Container, Group, Menu } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { Text } from '@mantine/core';
 import classes from "../css/HeaderMenu.module.css";
 
 const links = [
