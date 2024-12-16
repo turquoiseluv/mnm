@@ -7,11 +7,11 @@ import "./globals.css";
 import "@mantine/core/styles.css";
 
 import { ColorSchemeScript, createTheme, MantineProvider } from "@mantine/core";
-import { DraculaTheme } from "dracula-mantine";
+// import { DraculaTheme } from "dracula-mantine";
 
 export const metadata: Metadata = {
-	title: "My Mantine app",
-	description: "I have followed setup instructions carefully",
+	title: "Mute - My ASMR Playlist",
+	description: "mute all plz..",
 };
 
 const fontNotoSansKR = localFont({
