@@ -31,7 +31,7 @@ const fontYeongdo = localFont({
 });
 
 const theme = createTheme({
-	...DraculaTheme,
+	// ...DraculaTheme,
 	fontFamily: fontNotoSansKR.style.fontFamily,
 	fontFamilyMonospace: fontNotoSansMono.style.fontFamily,
 });
@@ -44,10 +44,10 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
-				<ColorSchemeScript defaultColorScheme="dark" />
+				<ColorSchemeScript defaultColorScheme="light" />
 			</head>
 			<body className={`${fontYeongdo.variable} antialiased`}>
-				<MantineProvider defaultColorScheme="dark" theme={theme}>
+				<MantineProvider defaultColorScheme="light" theme={theme}>
 					{children}
 				</MantineProvider>
 			</body>

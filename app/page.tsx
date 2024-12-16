@@ -5,6 +5,7 @@ import MyCard from "./components/MyCard";
 import { Button, Container } from "@mantine/core";
 import { HeaderMenu } from "./components/HeaderMenu";
 import { FooterSocial } from "./components/FooterSocial";
+import VttPlayer from "./components/VttPlayer";
 
 export default function Home() {
 	const [playerOn, setPlayerOn] = useState(true);
@@ -17,10 +18,8 @@ export default function Home() {
 				<MyCard playerOn={playerOn} togglePlayer={togglePlayer} />
 			</div>
 			<Container size="xl" className="py-10" style={{ minHeight: "calc(100vh - 56px - 99px)" }}>
-				<p>This is a boilerplate app for Mute - ASMR Audio Web Player</p>
-				<p>mute all plz!</p>
-				<br />
 				<Button onClick={togglePlayer}>Toggle Player</Button>
+				<VttPlayer vttUrl={"./sample/sample.vtt"} /> 
 			</Container>
 			<FooterSocial />
 		</div>
