@@ -22,7 +22,6 @@ const VttPlayer: React.FC<VttPlayerProps> = ({ vttUrl }) => {
         const text = await response.text();
         const parsedCaptions = parseVttFile(text);
         setCaptions(parsedCaptions);
-        console.log(parsedCaptions)
       } catch (error) {
         console.error('Error fetching VTT file:', error);
       } finally {
