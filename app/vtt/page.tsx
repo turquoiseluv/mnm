@@ -76,10 +76,10 @@ export default function Vtt() {
 							className={`flex absolute p-10`}
 							initial={{ fontSize: "1.5em", opacity: 0, userSelect: "none" }}
 							animate={{
+								transition: { duration: 0.1 },
 								color: Math.abs(vttIdx - idx) > 0 ? "rgba(255,255,255,0)" : "rgba(255,255,255,1)",
 								textShadow: Math.abs(vttIdx - idx) === 1 ? "0 0 8px white" : "0 0 -1px white",
-								opacity: vttIdx - idx === 0 ? 1 : Math.abs(vttIdx - idx) === 1 ? 0.5 : 0,
-								transition: { duration: 0.2 },
+								opacity: vttIdx - idx === 0 ? 1 : Math.abs(vttIdx - idx) === 1 ? 0 : 0,
 								y: vttIdx < idx ? "1em" : vttIdx > idx ? "-1em" : "0",
 								z: vttIdx - idx === 0 ? 10 : 1,
 								scaleX: vttIdx - idx === 0 ? 1 : Math.abs(vttIdx - idx) === 1 ? 0.8 : 0,
